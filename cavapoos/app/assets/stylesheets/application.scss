@@ -1,0 +1,43 @@
+@import "materialize/components/color";
+$secondary-color: color("brown", "lighten-3") !default;
+
+@import 'materialize';
+@import 'home';
+@import 'puppies';
+
+
+.box {
+  width: 30%;
+  height: inherit;
+  background-color: white;
+  margin-top: 2em;
+  margin-left: 35%;
+  margin-right: 0;
+}
+
+.nav-mobile {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.bar {
+  border-bottom: 1px solid #2cf0c7;
+}
+
+.admin_sess {
+  height: 46em;
+}
+.logo {
+  width: 10em;
+  margin-top: .2em;
+}
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }

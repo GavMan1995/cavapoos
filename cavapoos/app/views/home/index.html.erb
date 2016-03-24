@@ -1,0 +1,39 @@
+
+  <div class="row">
+    <div class="col s12 teal lighten-4 z-depth-1">
+      <div class="row">
+        <div class="col s6 left">
+          <img class="responsive-image p2_image" src="<%= image_path("cavapoo.jpg") %>">
+        </div>
+        <div class="col s6 right">
+          <h3 class="center">About Cavapoochons</h3>
+          <hr/>
+          <p>
+            The Cavapoochon is a tribrid and mixes the three popular breeds of the Cavalier King Charles Spaniel,
+            Toy Poodle and Bichon Frise. The Cavapoochon is a new breed that has recently started being bred in the USA.
+            They have been hailed as the dog that ‘never loses its puppy face’.we are the first liscenced kennel to breed these beautiful pups in
+            ireland. The cavapoochon is a small playful dog full of character and is hypoallergenic so they are perfect for allergy sufferers.
+          </p>
+        </div>
+      </div>
+    </div>
+     <% if @puppies.any? %>
+      <div class="col s8 offset-s2 pup_div">
+        <% if admin_signed_in? %>
+          <% @puppies.each do |puppy| %>
+              <img class="responsive-image circle p_image " src="<%= image_path("cavapoo.jpg") %>">
+              <p class="center"><%= "$#{puppy.price}" %></p>
+              <hr/>
+          <% end %>
+        <% else %>
+          <% @puppies.each do |puppy| %>
+            <img class="responsive-image circle p_image " src="<%= image_path("cavapoo.jpg") %>">
+            <p class="center"><%= "$#{puppy.price}" %></p>
+            <hr/>
+          <% end %>
+        <% end %>
+    <% else %>
+      h3>There are currently no puppies!</h3>
+    </div>
+    <% end %>
+  </div>
